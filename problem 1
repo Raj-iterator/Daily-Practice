@@ -1,0 +1,38 @@
+Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+
+For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
+
+
+
+package daily1.pkgreturn.two.number.add.upto.k;
+import java.io.PrintStream;
+import java.util.Scanner;
+        
+public class Daily1ReturnTwoNumberAddUptoK {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        PrintStream cout = System.out;
+        Scanner cin = new Scanner(System.in);
+        
+        int a[] = {10,15,3,7};
+        int k,flag=0;
+        k = cin.nextInt();
+        
+        for(int i = 0;i<4-1;i++)
+        {
+            for(int j = i+1;j<4;j++)
+            {
+                if ( (a[i] + a[j] ) == k)
+                {
+                    cout.print("true");
+                    flag = 1;
+                    break;
+                }
+            }
+        }
+        if(flag == 0)
+            cout.print("False");
+    }
+    
+}
